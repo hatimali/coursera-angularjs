@@ -1,0 +1,16 @@
+<div ng-if="list.isEmpty()">Nothing found</div>
+<ul>
+    <table>
+        <tr ng-repeat="item in list.found">
+            <td>{{ item.short_name }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td><button ng-click="list.onRemove({index: $index});">Don't want this one!</button></td>
+        </tr>
+    </table>
+
+    <!--<li ng-repeat="item in list.found">-->
+        <!--{{item.name}}, {{item.short_name}}, {{item.description}}-->
+        <!--<button ng-click="list.onRemove({index: $index});">Don't want this one!</button>-->
+    <!--</li>-->
+</ul>
